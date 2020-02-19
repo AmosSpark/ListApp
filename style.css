@@ -84,6 +84,10 @@ ul {
   list-style-type: none;
 }
 
+.fa-remove {
+  cursor: pointer;
+}
+
 .container__clear-all {
   /*Clear all btn style*/
   width: 15rem;
