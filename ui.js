@@ -1,13 +1,12 @@
-
 class Task {
   constructor(taskValue) {
-    this.taskValue = taskValue
+    this.taskValue = taskValue;
   }
 }
 
 class UI {
-
-  showAlert(message, className) { // Show Alert
+  showAlert(message, className) {
+    // Show Alert
 
     // Create element
     const div = document.createElement("div");
@@ -31,7 +30,8 @@ class UI {
     setTimeout(timeOut, 1000);
   }
 
-  showTask(task) { // Show/Add task to UI
+  showTask(task) {
+    // Show/Add task to UI
     /*
     const list = document.createElement("li"),
       span = document.createElement("span"),
@@ -48,18 +48,19 @@ class UI {
     taskCollection.appendChild(list);
     console.log(list);
     */
-   const list = document.createElement("li");
-         list.className = "collection-item";
-         list.innerHTML = `<p>${taskInput.value}</p><a href="#" class="del-item">X</a>`;
-         list.firstElementChild.className = "item";
-         taskCollection.appendChild(list);
-         console.log(list);
+    const list = document.createElement("li");
+    list.className = "collection-item";
+    list.innerHTML = `<p>${taskInput.value}</p><a href="#" class="del-item">X</a>`;
+    list.firstElementChild.className = "item";
+    taskCollection.appendChild(list);
+    console.log(list);
   }
 
-  filter(target) {  // Filter task
+  filter(target) {
+    // Filter task
     const filterText = target.value.toLowerCase();
     const allTask = document.querySelectorAll(".collection-item");
-    allTask.forEach((task) => {
+    allTask.forEach(task => {
       const item = task.firstChild.textContent;
       if (item.toLowerCase().indexOf(filterText) != -1) {
         task.style.display = "flex";
@@ -69,19 +70,21 @@ class UI {
     });
   }
 
-  clearInput() { // Clear task
+  clearInput() {
+    // Clear task
     taskInput.value = "";
   }
 
-  delTask(target) { // Remove task
+  delTask(target) {
+    // Remove task
     if (target.className === "del-item") {
       target.parentElement.remove();
     }
   }
 
-  clearAllTask() {  // Clear all TAsk
+  clearAllTask() {
+    // Clear all TAsk
     alert("This action will delete all task!");
     taskCollection.innerHTML = "";
   }
-
 }
