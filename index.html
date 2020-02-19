@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>ListApp</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div id="container">
+      <header class="container__header">
+        <h1>ListApp</h1>
+      </header>
 
-        <header class="container__header">
-            <h1>ListApp</h1>
-        </header>
+      <form class="container__form">
+        <input
+          type="text"
+          class="container__taskInput"
+          placeholder="Add Task"
+          autofocus
+        />
+        <br />
+        <button class="btn container__btn-add">Add</button>
+        <input type="text" class="container__filter" placeholder="Filter" />
+      </form>
 
-        <form class="container__form">
-            <input type="text" class="container__taskInput" placeholder="Add Task" autofocus> <br>
-            <button class="btn container__btn-add">Add</button> 
-            <input type="text" class="container__filter" placeholder="Filter">
-        </form>
+      <div class="container__collection">
+        <ul class="container__collection-list"></ul>
+      </div>
 
-        <div class="container__collection">
-            <ul class="container__collection-list"></ul>
-        </div>
-        
-        <div>
-            <button class="btn container__clear-all">Clear Task</button> <br>
-        </div>
-
+      <div>
+        <button class="btn container__clear-all">Clear Task</button> <br />
+      </div>
     </div>
-
-    <script src="./storage.js"></script>
-    <script src="./ui.js"></script>
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
